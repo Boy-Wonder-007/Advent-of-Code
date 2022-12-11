@@ -14,7 +14,8 @@ def monkeyRound(monkeys):
                 monkeys[x][0][y] = monkeys[x][0][y]*monkeys[x][1][1]
             elif monkeys[x][1][0] == "**":
                 monkeys[x][0][y] = monkeys[x][0][y]*monkeys[x][0][y]
-
+            
+            #comment for part 2
             monkeys[x][0][y] = math.floor(monkeys[x][0][y]/3)
         
             if monkeys[x][0][y]%monkeys[x][1][2] == 0:
@@ -34,5 +35,8 @@ for x in range(20):
                 temp.append(monkeys[x][0][y])
         monkeys[x][0] = temp
         temp = []
-
+    #uncomment for part 2
+    #for x in range(len(monkeys)):
+    #    for y in range(len(monkeys[x][0])):
+    #        monkeys[x][0][y] = monkeys[x][0][y]%(13*3*7*2*19*5*11*17)
 print(inspects)
